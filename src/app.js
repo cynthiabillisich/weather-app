@@ -64,11 +64,12 @@ function displayForecast(response) {
   forecastElement.innerHTML = forecastHTML;
 }
 
-function getForecsat(coordinates) {
-  let apiKey = "856c9c7e9e248120caed23d08f8cd4b";
+function getForecast(coordinates) {
+  let apiKey = "3856c9c7e9e248120caed23d08f8cd4b";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayForecast);
 }
+
 function displayTemperature(response) {
   let temperatureElement = document.querySelector("#temperature");
   let cityElement = document.querySelector("#city");
